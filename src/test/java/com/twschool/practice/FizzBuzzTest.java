@@ -29,4 +29,15 @@ public class FizzBuzzTest {
         //then
         assertThat(result, is("fizz"));
     }
+
+    @Test
+    public void should_return_5_given_number_5(){
+        //given
+
+        //when
+        String result = fizzBuzz.say(5);
+
+        //then
+        assertThat(result, is("Buzz"));
+    }
 }
