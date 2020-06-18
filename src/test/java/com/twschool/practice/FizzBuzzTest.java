@@ -18,4 +18,15 @@ public class FizzBuzzTest {
         //then
         assertThat(result, is("1"));
     }
+
+    @Test
+    public void should_return_3_given_number_3(){
+        //given
+
+        //when
+        String result = fizzBuzz.say(3);
+
+        //then
+        assertThat(result, is("fizz"));
+    }
 }
