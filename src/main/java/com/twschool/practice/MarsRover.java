@@ -55,6 +55,7 @@ public class MarsRover {
                         this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() - 1);
                         break;
                     case "S":
+                        this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() - 1);
                         break;
                     case "E":
                         break;
