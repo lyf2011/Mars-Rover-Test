@@ -3,6 +3,10 @@ package com.twschool.practice;
 public class FizzBuzz {
     public String say(Integer number){
 
+        if (String.valueOf(number).contains("7")){
+            return "fizz";
+        }
+
         if (String.valueOf(number).contains("5")){
             return "BuzzWhizz";
         }
