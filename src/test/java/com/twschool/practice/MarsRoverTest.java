@@ -87,4 +87,20 @@ public class MarsRoverTest {
         assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
         assertThat(marsRover.getDirection(), is("N"));
     }
+
+    @Test
+    public void should_return_negative_1_0_W_given_0_0_W_and_M() {
+        //given
+        Coordinate coordinate = new Coordinate(0, 0);
+        String direction = "W";
+        MarsRover marsRover = new MarsRover(coordinate, direction);
+
+        //when
+        marsRover.execute(Arrays.asList("M"));
+
+        //then
+        assertThat(marsRover.getCoordinate().getCoordinateX(), is(-1));
+        assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
+        assertThat(marsRover.getDirection(), is("W"));
+    }
 }

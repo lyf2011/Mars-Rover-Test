@@ -52,13 +52,11 @@ public class MarsRover {
                         this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() + 1);
                         break;
                     case "W":
-                        this.direction = "N";
+                        this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() - 1);
                         break;
                     case "S":
-                        this.direction = "W";
                         break;
                     case "E":
-                        this.direction = "S";
                         break;
                 }
             }
