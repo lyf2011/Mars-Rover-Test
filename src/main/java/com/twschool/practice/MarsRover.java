@@ -30,6 +30,22 @@ public class MarsRover {
                         break;
                 }
             }
+            if (command == "R") {
+                switch(this.direction){
+                    case "N":
+                        this.direction = "E";
+                        break;
+                    case "W":
+                        this.direction = "N";
+                        break;
+                    case "S":
+                        this.direction = "W";
+                        break;
+                    case "E":
+                        this.direction = "S";
+                        break;
+                }
+            }
         }
     }
 
