@@ -13,7 +13,7 @@ public class MarsRover {
 
     public void execute(List<String> commands) {
         for (int i = 0; i < commands.size(); i++) {
-            String command = commands.get(0);
+            String command = commands.get(i);
             if (command == "L") {
                 switch(this.direction){
                     case "N":
