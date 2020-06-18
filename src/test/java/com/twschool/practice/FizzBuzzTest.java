@@ -31,11 +31,11 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_Buzz_given_number_5(){
+    public void should_return_Buzz_given_number_can_divide_by_5(){
         //given
 
         //when
-        String result = fizzBuzz.say(5);
+        String result = fizzBuzz.say(20);
 
         //then
         assertThat(result, is("Buzz"));
@@ -53,11 +53,11 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_fizzBuzz_given_number_15(){
+    public void should_return_fizzBuzz_given_number_can_divide_by_3_and_5(){
         //given
 
         //when
-        String result = fizzBuzz.say(15);
+        String result = fizzBuzz.say(90);
 
         //then
         assertThat(result, is("fizzBuzz"));
@@ -86,11 +86,11 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_fizzBuzzWhizz_given_number_105(){
+    public void should_return_fizzBuzzWhizz_given_number_can_divide_by_3_and_5_and_7(){
         //given
 
         //when
-        String result = fizzBuzz.say(105);
+        String result = fizzBuzz.say(210);
 
         //then
         assertThat(result, is("fizzBuzzWhizz"));
@@ -105,5 +105,16 @@ public class FizzBuzzTest {
 
         //then
         assertThat(result, is("fizz"));
+    }
+
+    @Test
+    public void should_return_fizz_given_number_contain_5(){
+        //given
+
+        //when
+        String result = fizzBuzz.say(55);
+
+        //then
+        assertThat(result, is("BuzzWhizz"));
     }
 }
