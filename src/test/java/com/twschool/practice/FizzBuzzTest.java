@@ -20,7 +20,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_3_given_number_3(){
+    public void should_return_fizz_given_number_3(){
         //given
 
         //when
@@ -31,7 +31,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_5_given_number_5(){
+    public void should_return_Buzz_given_number_5(){
         //given
 
         //when
@@ -42,7 +42,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_7_given_number_7(){
+    public void should_return_Whizz_given_number_7(){
         //given
 
         //when
