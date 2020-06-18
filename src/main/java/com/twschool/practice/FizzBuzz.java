@@ -2,6 +2,9 @@ package com.twschool.practice;
 
 public class FizzBuzz {
     public String say(Integer number){
+        if (String.valueOf(number).contains("3")){
+            return "fizz";
+        }
 
         if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
             return "fizzBuzzWhizz";

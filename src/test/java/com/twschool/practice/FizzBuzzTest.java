@@ -75,11 +75,11 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_BuzzWhizz_given_number_35(){
+    public void should_return_BuzzWhizz_given_number_can_divide_by_5_and_7(){
         //given
 
         //when
-        String result = fizzBuzz.say(35);
+        String result = fizzBuzz.say(70);
 
         //then
         assertThat(result, is("BuzzWhizz"));
@@ -94,5 +94,16 @@ public class FizzBuzzTest {
 
         //then
         assertThat(result, is("fizzBuzzWhizz"));
+    }
+
+    @Test
+    public void should_return_fizz_given_number_contain_3(){
+        //given
+
+        //when
+        String result = fizzBuzz.say(31);
+
+        //then
+        assertThat(result, is("fizz"));
     }
 }
