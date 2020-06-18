@@ -183,4 +183,20 @@ public class MarsRoverTest {
         assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
         assertThat(marsRover.getDirection(), is("S"));
     }
+
+    @Test
+    public void should_return_1_0_E_given_0_0_E_and_M() {
+        //given
+        Coordinate coordinate = new Coordinate(0, 0);
+        String direction = "E";
+        MarsRover marsRover = new MarsRover(coordinate, direction);
+
+        //when
+        marsRover.execute(Arrays.asList("M"));
+
+        //then
+        assertThat(marsRover.getCoordinate().getCoordinateX(), is(1));
+        assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
+        assertThat(marsRover.getDirection(), is("E"));
+    }
 }
