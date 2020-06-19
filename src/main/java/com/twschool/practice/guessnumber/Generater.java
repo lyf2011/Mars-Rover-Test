@@ -1,19 +1,24 @@
 package com.twschool.practice.guessnumber;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Generater {
     private int numberCount;
     private String numberStrings = "";
+    private HashSet<Integer> numbers = new HashSet<>();
 
     public Generater(int numberCount) {
         this.numberCount = numberCount;
     }
 
-    public String createNumerStrings() {
+    public String createNumberStrings() {
         String temStr = "";
-        for (int i = 0; i <numberCount ; i++) {
-            temStr += generateInt() + ",";
+        while (numbers.size() < numberCount) {
+            int currentNumber = generateInt();
+            if(numbers.add(currentNumber)){
+                temStr += currentNumber + ",";
+            };
         }
         numberStrings = temStr.substring(0,temStr.length()-1);
         return numberStrings;
