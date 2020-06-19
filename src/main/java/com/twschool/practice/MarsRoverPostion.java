@@ -1,14 +1,26 @@
 package com.twschool.practice;
 
 public class MarsRoverPostion {
-    protected  int x;
-    protected  int y;
-    protected String direction;
+    private  int x;
+    private  int y;
+    private String direction;
 
     public MarsRoverPostion(int X, int Y, String direction) {
         x = X;
         y = Y;
         this.direction = direction;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public String getDirection() {
+        return direction;
     }
 
     void turnRight() {

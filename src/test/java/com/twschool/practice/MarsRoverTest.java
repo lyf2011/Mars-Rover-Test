@@ -18,9 +18,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("L"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("W"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("W"));
     }
 
     @Test
@@ -33,9 +33,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("R"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("E"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("E"));
     }
 
     @Test
@@ -48,9 +48,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("M"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(1));
-        assertThat(marsRover.getPosition().direction, is("N"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(1));
+        assertThat(marsRover.getPosition().getDirection(), is("N"));
     }
 
     @Test
@@ -63,9 +63,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("L"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("S"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("S"));
     }
 
     @Test
@@ -78,9 +78,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("R"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("N"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("N"));
     }
 
     @Test
@@ -93,9 +93,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("M"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(-1));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("W"));
+        assertThat(marsRover.getPosition().getX(), is(-1));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("W"));
     }
 
     @Test
@@ -108,9 +108,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("L"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("E"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("E"));
     }
 
     @Test
@@ -123,9 +123,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("R"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("W"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("W"));
     }
 
     @Test
@@ -138,9 +138,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("M"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(-1));
-        assertThat(marsRover.getPosition().direction, is("S"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(-1));
+        assertThat(marsRover.getPosition().getDirection(), is("S"));
     }
 
     @Test
@@ -153,9 +153,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("L"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("N"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("N"));
     }
 
     @Test
@@ -168,9 +168,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("R"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("S"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("S"));
     }
 
     @Test
@@ -183,9 +183,9 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("M"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(1));
-        assertThat(marsRover.getPosition().y, is(0));
-        assertThat(marsRover.getPosition().direction, is("E"));
+        assertThat(marsRover.getPosition().getX(), is(1));
+        assertThat(marsRover.getPosition().getY(), is(0));
+        assertThat(marsRover.getPosition().getDirection(), is("E"));
     }
 
     @Test
@@ -198,8 +198,8 @@ public class MarsRoverTest {
         marsRover.execute(Arrays.asList("M", "M", "L", "L", "M"));
 
         //then
-        assertThat(marsRover.getPosition().x, is(0));
-        assertThat(marsRover.getPosition().y, is(1));
-        assertThat(marsRover.getPosition().direction, is("S"));
+        assertThat(marsRover.getPosition().getX(), is(0));
+        assertThat(marsRover.getPosition().getY(), is(1));
+        assertThat(marsRover.getPosition().getDirection(), is("S"));
     }
 }
