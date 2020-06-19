@@ -26,4 +26,14 @@ public class GameTest {
 
         assertThat(status, is(GameStatus.SUCCESS));
     }
+
+    @Test
+    public void should_return_CONTINUE_with_user_input_1256_given_answer_1234(){
+        Game game = new Game(answer);
+
+        game.guess("1,2,5,6");
+        GameStatus status = game.getStatus();
+
+        assertThat(status, is(GameStatus.CONTINUE));
+    }
 }
