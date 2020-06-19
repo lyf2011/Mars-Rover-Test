@@ -1,7 +1,6 @@
 package com.twschool.practice.guessnumber;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class GameAnswer {
 
@@ -14,6 +13,13 @@ public class GameAnswer {
 
     public String check(String userInputString) {
         List<String> userInput = Arrays.asList(userInputString.split(","));
+
+        List<String> listWithoutDup = new ArrayList<String>(new HashSet<String>(userInput));
+
+        if (listWithoutDup.size() < userInput.size() || userInput.size()< 4) {
+            return "Wrong Input，Input again";
+        }
+
         int countA = 0;
         int countB = 0;
 

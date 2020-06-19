@@ -60,4 +60,22 @@ public class GameAnswerTest {
 
         assertThat(result, is("0A0B"));
     }
+
+    @Test
+    public void should_return_WRONG_INPUT_given_user_input_6678(){
+        String userInput = "6,6,7,8";
+
+        String result = answer.check(userInput);
+
+        assertThat(result, is("Wrong Input，Input again"));
+    }
+
+    @Test
+    public void should_return_WRONG_INPUT_given_user_input_12(){
+        String userInput = "1,2";
+
+        String result = answer.check(userInput);
+
+        assertThat(result, is("Wrong Input，Input again"));
+    }
 }
