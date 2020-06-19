@@ -15,53 +15,65 @@ public class MarsRover {
         for (int i = 0; i < commands.size(); i++) {
             String command = commands.get(i);
             if (command == "L") {
-                switch(this.direction){
-                    case "N":
-                        this.direction = "W";
-                        break;
-                    case "W":
-                        this.direction = "S";
-                        break;
-                    case "S":
-                        this.direction = "E";
-                        break;
-                    case "E":
-                        this.direction = "N";
-                        break;
-                }
+                turnLeft();
             }
             if (command == "R") {
-                switch(this.direction){
-                    case "N":
-                        this.direction = "E";
-                        break;
-                    case "W":
-                        this.direction = "N";
-                        break;
-                    case "S":
-                        this.direction = "W";
-                        break;
-                    case "E":
-                        this.direction = "S";
-                        break;
-                }
+                turnRight();
             }
             if (command == "M") {
-                switch(this.direction){
-                    case "N":
-                        this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() + 1);
-                        break;
-                    case "W":
-                        this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() - 1);
-                        break;
-                    case "S":
-                        this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() - 1);
-                        break;
-                    case "E":
-                        this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() + 1);
-                        break;
-                }
+                move();
             }
+        }
+    }
+
+    private void move() {
+        switch(this.direction){
+            case "N":
+                this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() + 1);
+                break;
+            case "W":
+                this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() - 1);
+                break;
+            case "S":
+                this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() - 1);
+                break;
+            case "E":
+                this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() + 1);
+                break;
+        }
+    }
+
+    private void turnRight() {
+        switch(this.direction){
+            case "N":
+                this.direction = "E";
+                break;
+            case "W":
+                this.direction = "N";
+                break;
+            case "S":
+                this.direction = "W";
+                break;
+            case "E":
+                this.direction = "S";
+                break;
+        }
+    }
+
+    private void turnLeft() {
+        switch(this.direction){
+            case "N":
+                this.direction = "W";
+                break;
+            case "W":
+                this.direction = "S";
+                break;
+            case "S":
+                this.direction = "E";
+                break;
+            case "E":
+                this.direction = "N";
+                break;
         }
     }
 
