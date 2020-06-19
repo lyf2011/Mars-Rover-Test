@@ -5,10 +5,19 @@ import java.util.List;
 public class MarsRover {
     private  Coordinate coordinate;
     private  String direction;
+    private MarsRoverPostion position;
 
     public MarsRover(Coordinate coordinate, String direction) {
         this.coordinate = coordinate;
         this.direction = direction;
+    }
+
+    public MarsRover(MarsRoverPostion position) {
+        this.position = position;
+    }
+
+    public MarsRoverPostion getPosition() {
+        return position;
     }
 
     public void execute(List<String> commands) {
@@ -27,52 +36,52 @@ public class MarsRover {
     }
 
     private void move() {
-        switch(this.direction){
+        switch(position.direction){
             case "N":
-                this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() + 1);
+                position.y++;
                 break;
             case "W":
-                this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() - 1);
+                position.x--;
                 break;
             case "S":
-                this.coordinate.setCoordinateY(this.coordinate.getCoordinateY() - 1);
+                position.y--;
                 break;
             case "E":
-                this.coordinate.setCoordinateX(this.coordinate.getCoordinateX() + 1);
+                position.x++;
                 break;
         }
     }
 
     private void turnRight() {
-        switch(this.direction){
+        switch(position.direction){
             case "N":
-                this.direction = "E";
+                position.direction = "E";
                 break;
             case "W":
-                this.direction = "N";
+                position.direction = "N";
                 break;
             case "S":
-                this.direction = "W";
+                position.direction = "W";
                 break;
             case "E":
-                this.direction = "S";
+                position.direction = "S";
                 break;
         }
     }
 
     private void turnLeft() {
-        switch(this.direction){
+        switch(position.direction){
             case "N":
-                this.direction = "W";
+                position.direction = "W";
                 break;
             case "W":
-                this.direction = "S";
+                position.direction = "S";
                 break;
             case "S":
-                this.direction = "E";
+                position.direction = "E";
                 break;
             case "E":
-                this.direction = "N";
+                position.direction = "N";
                 break;
         }
     }

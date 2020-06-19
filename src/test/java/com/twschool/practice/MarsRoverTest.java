@@ -11,17 +11,20 @@ public class MarsRoverTest {
     @Test
     public void should_return_0_0_W_given_0_0_N_and_L() {
         //given
-        Coordinate coordinate = new Coordinate(0, 0);
-        String direction = "N";
-        MarsRover marsRover = new MarsRover(coordinate, direction);
+
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, "N");
+        MarsRover marsRover = new MarsRover(position);
 
         //when
         marsRover.execute(Arrays.asList("L"));
 
         //then
-        assertThat(marsRover.getCoordinate().getCoordinateX(), is(0));
-        assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
-        assertThat(marsRover.getDirection(), is("W"));
+//        assertThat(marsRover.getCoordinate().getCoordinateX(), is(0));
+//        assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
+//        assertThat(marsRover.getDirection(), is("W"));
+        assertThat(marsRover.getPosition().x, is(0));
+        assertThat(marsRover.getPosition().y, is(0));
+        assertThat(marsRover.getPosition().direction, is("W"));
     }
 
     @Test
