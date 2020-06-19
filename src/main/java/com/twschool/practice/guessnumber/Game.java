@@ -21,6 +21,10 @@ public class Game {
         return result;
     }
 
+    public int getLeftTimes() {
+        return leftTimes;
+    }
+
     public GameStatus getStatus() {
         return status;
     }
