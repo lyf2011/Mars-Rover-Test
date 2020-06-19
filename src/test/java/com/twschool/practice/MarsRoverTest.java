@@ -11,7 +11,7 @@ public class MarsRoverTest {
     @Test
     public void should_return_0_0_W_given_0_0_N_and_L() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "N");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.N);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -20,13 +20,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("W"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.W));
     }
 
     @Test
     public void should_return_0_0_E_given_0_0_N_and_R() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "N");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.N);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -35,13 +35,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("E"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.E));
     }
 
     @Test
     public void should_return_0_1_N_given_0_0_N_and_M() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "N");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.N);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -50,13 +50,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(1));
-        assertThat(marsRover.getPosition().getDirection(), is("N"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.N));
     }
 
     @Test
     public void should_return_0_0_S_given_0_0_W_and_L() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "W");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.W);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -65,13 +65,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("S"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.S));
     }
 
     @Test
     public void should_return_0_0_N_given_0_0_W_and_R() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "W");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.W);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -80,13 +80,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("N"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.N));
     }
 
     @Test
     public void should_return_negative_1_0_W_given_0_0_W_and_M() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "W");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.W);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -95,13 +95,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(-1));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("W"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.W));
     }
 
     @Test
     public void should_return_0_0_E_given_0_0_S_and_L() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "S");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.S);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -110,13 +110,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("E"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.E));
     }
 
     @Test
     public void should_return_0_0_W_given_0_0_S_and_R() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "S");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.S);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -125,13 +125,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("W"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.W));
     }
 
     @Test
     public void should_return_0_negative_1_S_given_0_0_S_and_M() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "S");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.S);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -140,13 +140,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(-1));
-        assertThat(marsRover.getPosition().getDirection(), is("S"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.S));
     }
 
     @Test
     public void should_return_0_0_N_given_0_0_E_and_L() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "E");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.E);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -155,13 +155,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("N"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.N));
     }
 
     @Test
     public void should_return_0_0_S_given_0_0_E_and_R() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "E");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.E);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -170,13 +170,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("S"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.S));
     }
 
     @Test
     public void should_return_1_0_E_given_0_0_E_and_M() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "E");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.E);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -185,13 +185,13 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(1));
         assertThat(marsRover.getPosition().getY(), is(0));
-        assertThat(marsRover.getPosition().getDirection(), is("E"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.E));
     }
 
     @Test
     public void should_return_0_1_S_given_0_0_N_and_MMLLM() {
         //given
-        MarsRoverPostion position = new MarsRoverPostion(0, 0, "N");
+        MarsRoverPostion position = new MarsRoverPostion(0, 0, Direction.N);
         MarsRover marsRover = new MarsRover(position);
 
         //when
@@ -200,6 +200,6 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getPosition().getX(), is(0));
         assertThat(marsRover.getPosition().getY(), is(1));
-        assertThat(marsRover.getPosition().getDirection(), is("S"));
+        assertThat(marsRover.getPosition().getDirection(), is(Direction.S));
     }
 }
